@@ -642,7 +642,7 @@ a:hover {
 
 .navbar-default.navbar-trans .nav-link,
 .navbar-default.navbar-reduce .nav-link {
-  font-size: 1.1rem;
+  font-size: .8rem;
   color: #000000;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -729,10 +729,12 @@ a:hover {
   color: #000000;
 }
 
-.navbar-default.navbar-reduce .navbar-brand {
+ .navbar-brand {
   color: #000000;
-  font-size: 18px;
+  font-size: 17px;
+  align-items: left;
 }
+
 
 .navbar-default .dropdown .dropdown-menu {
   border-top: 0;
@@ -787,6 +789,7 @@ a:hover {
 /*------/ Hamburger Navbar /------*/
 .navbar-toggler {
   position: relative;
+  margin-right: 1rem;
 }
 
 .navbar-toggler:focus,
