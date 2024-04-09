@@ -1,4 +1,10 @@
-
+/**
+* Template Name: EstateAgency
+* Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+* Updated: Mar 17 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
 /*--------------------------------------------------------------
 # General
@@ -102,13 +108,13 @@ a:hover {
 
 .text-brand {
   color: #000000;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
 @media (max-width: 767px) {
   .text-brand {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -118,7 +124,7 @@ a:hover {
 }
 
 .color-b {
-  color: #9c7c38;
+  color: #2eca6a;
 }
 
 .color-d {
@@ -642,7 +648,7 @@ a:hover {
 
 .navbar-default.navbar-trans .nav-link,
 .navbar-default.navbar-reduce .nav-link {
-  font-size: .8rem;
+  font-size: 1.1rem;
   color: #000000;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -729,12 +735,9 @@ a:hover {
   color: #000000;
 }
 
- .navbar-brand {
+.navbar-default.navbar-reduce .navbar-brand {
   color: #000000;
-  font-size: 17px;
-  align-items: left;
 }
-
 
 .navbar-default .dropdown .dropdown-menu {
   border-top: 0;
@@ -789,7 +792,6 @@ a:hover {
 /*------/ Hamburger Navbar /------*/
 .navbar-toggler {
   position: relative;
-  margin-right: 1rem;
 }
 
 .navbar-toggler:focus,
@@ -836,25 +838,318 @@ a:hover {
   opacity: 0.9;
 }
 
+/*======================================
+//--//-->   BOX COLAPSE
+======================================*/
+.box-collapse {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1040;
+  background-color: #ffffff;
+  transform: translateX(100%);
+  transition: all 0.6s ease;
+}
 
+@media (min-width: 768px) {
+  .box-collapse {
+    width: 50%;
+  }
+}
+
+.box-collapse .title-box-d {
+  top: 30px;
+  left: 60px;
+  opacity: 0;
+  transition: all 1s ease;
+  transition-delay: 0.3s;
+}
+
+@media (max-width: 575px) {
+  .box-collapse .title-box-d {
+    left: 35px;
+  }
+}
+
+@media (max-width: 575px) {
+  .box-collapse .title-box-d .title-d {
+    font-size: 1.3rem;
+  }
+}
+
+.box-collapse-wrap {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 6.5rem;
+  bottom: 5rem;
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  transform: translateY(3rem);
+  transition: transform 0.5s 0.5s ease, opacity 0.5s 0.5s ease;
+}
+
+.box-collapse-open .click-closed {
+  visibility: visible;
+}
+
+.box-collapse-open .box-collapse {
+  transform: translateX(0);
+  box-shadow: 0 0 65px rgba(0, 0, 0, 0.07);
+  opacity: 1;
+}
+
+.box-collapse-open .box-collapse .title-box-d {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.box-collapse-open .box-collapse-wrap {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.box-collapse-closed .box-collapse {
+  opacity: 0.7;
+  transition-delay: 0s;
+}
+
+.box-collapse-closed .box-collapse .title-box-d {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.box-collapse-closed .box-collapse .form-a {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.click-closed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 1035;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+.close-box-collapse {
+  position: absolute;
+  z-index: 1050;
+  top: 2rem;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.right-boxed {
+  right: 4.2857rem;
+}
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .intro {
-  height: 60vh;
-  width: 100%;
+  height: 100vh;
+  position: relative;
   color: #ffffff;
 }
 
-
-.banner{
- 
-  margin-top: 10rem;
-  color: black;
-  background-color: whitesmoke;
+.intro .swiper-pagination {
+  bottom: 50px;
 }
 
+.intro .swiper-pagination .swiper-pagination-bullet {
+  width: 18px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 0;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.intro .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #2eca6a;
+  width: 36px;
+}
+
+.intro .intro-item {
+  padding-top: 2rem;
+}
+
+.intro .carousel-item-a {
+  position: relative;
+  height: 100vh;
+}
+
+.intro .carousel-item-a.bg-image {
+  background-attachment: scroll;
+}
+
+.intro .intro-content {
+  position: absolute;
+}
+
+.intro .intro-body {
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .intro .intro-body {
+    padding-left: 2rem;
+  }
+}
+
+.intro .intro-body .price-a {
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  border: 2px solid #2eca6a;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.intro .spacial {
+  animation-delay: 0.2s;
+  color: #ffffff;
+}
+
+.intro .intro-title-top {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .intro .intro-title-top {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro .intro-title-top {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.intro .intro-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 576px) {
+  .intro .intro-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro .intro-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro .intro-title {
+    font-size: 4rem;
+  }
+}
+
+.intro .intro-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .intro .intro-subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+.intro .intro-subtitle.intro-price {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 576px) {
+  .intro .intro-subtitle.intro-price {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro .intro-subtitle.intro-price {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro .intro-subtitle.intro-price {
+    padding-top: 3rem;
+  }
+}
+
+/*------/ Intro Single /------*/
+.intro-single {
+  padding: 12rem 0 3rem;
+}
+
+@media (max-width: 767px) {
+  .intro-single {
+    padding-top: 9rem;
+  }
+}
+
+.intro-single .title-single-box {
+  padding: 1rem 0 1rem 2rem;
+}
+
+.intro-single .title-single-box {
+  border-left: 3px solid #2eca6a;
+}
+
+.intro-single .title-single-box .title-single {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+@media (min-width: 768px) {
+  .intro-single .title-single-box .title-single {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro-single .title-single-box .title-single {
+    font-size: 2.5rem;
+  }
+}
+
+.intro-single .breadcrumb-box {
+  padding: 1rem 0 0 0.5rem;
+}
+
+.intro-single .breadcrumb {
+  background-color: transparent;
+  padding-right: 0;
+  padding-left: 0;
+}
 
 /*--------------------------------------------------------------
 # Card General
@@ -1645,8 +1940,7 @@ a:hover {
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials-box {
-  padding: 3rem 0;
-  
+  padding: 1rem 0;
 }
 
 .testimonials-box .testimonial-avatar {

@@ -1,3 +1,10 @@
+/**
+* Template Name: EstateAgency
+* Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+* Updated: Mar 17 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
 (function() {
   "use strict";
@@ -77,7 +84,21 @@
     });
   }
 
+  /**
+   * Search window open/close
+   */
+  let body = select('body');
+  on('click', '.navbar-toggle-box', function(e) {
+    e.preventDefault()
+    body.classList.add('box-collapse-open')
+    body.classList.remove('box-collapse-closed')
+  })
 
+  on('click', '.close-box-collapse', function(e) {
+    e.preventDefault()
+    body.classList.remove('box-collapse-open')
+    body.classList.add('box-collapse-closed')
+  })
 
   /**
    * Intro Carousel
@@ -86,7 +107,7 @@
     speed: 600,
     loop: true,
     autoplay: {
-      delay: 6000,
+      delay: 2000,
       disableOnInteraction: false
     },
     slidesPerView: 'auto',
